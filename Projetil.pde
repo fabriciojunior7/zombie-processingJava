@@ -18,7 +18,7 @@ class Projetil extends Entidade{
   }
   
   void checarPosicao(){
-    if(this.x < 0 || this.x > width-this.largura || this.y < 0 || this.y > height-this.altura){
+    if(this.x < 0 || this.x > larguraJogo-this.largura || this.y < 0 || this.y > alturaJogo-this.altura){
       this.naTela = false;
     }
   }

@@ -5,15 +5,16 @@ class Zumbie extends Entidade{
 //Construtor
   public Zumbie(PImage imagem){
     this.cor = color(0, 255, 0);
-    this.largura = 32;
+    this.largura = 20;
     this.altura = 32;
-    this.x = random(0, width-this.largura);
-    this.y = random(0, height-this.altura);
+    this.x = random(0, larguraJogo-this.largura);
+    this.y = random(0, alturaJogo-this.altura);
     this.velocidadeBase = random(0.1, 0.5);
     this.velocidadeX = 0;
     this.velocidadeY = 0;
     this.aceleracao = 0.05;
     this.imagem = imagem;
+    this.forcaEmpurrao = 1;
   }
   
 //Metodos

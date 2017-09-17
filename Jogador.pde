@@ -50,7 +50,7 @@ class Jogador extends Entidade{
   }
   
   void moverDireita(){
-    if(this.x < width-this.largura){
+    if(this.x < larguraJogo-this.largura){
       if(this.velocidadeX < this.velocidadeMax){
         this.velocidadeX += this.aceleracao;
         if(this.velocidadeX < 0){
@@ -75,7 +75,7 @@ class Jogador extends Entidade{
   }
   
   void moverBaixo(){
-    if(this.y < height-this.altura){
+    if(this.y < alturaJogo-this.altura){
       if(this.velocidadeY < this.velocidadeMax){
         this.velocidadeY += this.aceleracao;
         if(this.velocidadeY < 0){
@@ -88,7 +88,7 @@ class Jogador extends Entidade{
   
   //Desaceleracao Eixo X
   void desaceleracaoX(){
-    if(this.x > 0 && this.x < width-this.largura){
+    if(this.x > 0 && this.x < larguraJogo-this.largura){
       if(this.wasd[1] == false && this.wasd[3] == false){
         if(this.velocidadeX < -this.velocidadeMin || this.velocidadeX > this.velocidadeMin){
           if(this.velocidadeX > 0){
@@ -111,7 +111,7 @@ class Jogador extends Entidade{
   
   //Desaceleracao Eixo Y
   void desaceleracaoY(){
-    if(this.y > 0 && this.y < height-this.altura){
+    if(this.y > 0 && this.y < alturaJogo-this.altura){
       if(this.wasd[0] == false && this.wasd[2] == false){
         if(this.velocidadeY < -this.velocidadeMin || this.velocidadeY > this.velocidadeMin){
           if(this.velocidadeY > 0){
@@ -156,7 +156,7 @@ class Jogador extends Entidade{
     if(this.x < 0){
       this.x += 1;
     }
-    else if(this.x > width-this.largura){
+    else if(this.x > larguraJogo-this.largura){
       this.x -= 1;
     }
     
@@ -164,7 +164,7 @@ class Jogador extends Entidade{
     if(this.y < 0){
       this.y += 1;
     }
-    else if(this.y > height-this.altura){
+    else if(this.y > alturaJogo-this.altura){
       this.y -= 1;
     }
   }
