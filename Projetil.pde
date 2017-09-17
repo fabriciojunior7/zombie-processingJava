@@ -4,17 +4,36 @@ class Projetil extends Entidade{
   boolean naTela;
 
 //Construtor
-  public Projetil(){
+  public Projetil(Entidade jogador){
     this.largura = 5;
     this.altura = 5;
-    this.velocidadeBase = 5;
+    //this.x = jogador.x + jogador.largura/2 - this.largura/2;
+    //this.y = jogador.y + jogador.altura/2 - this.altura/2;
+    this.x = jogador.x + jogador.largura/2;
+    this.y = jogador.y + jogador.altura/2;
+    this.velocidadeBase = 10;
     this.cor = color(200, 150, 100);
     this.naTela = true;
+    float x = jogador.x + jogador.largura/2;
+    float y = jogador.y + jogador.altura/2;
+    float hipotenusa = sqrt(sq(mouseX-x) + sq(mouseY-y));
+    float sen = (mouseX-x) / hipotenusa;
+    float cos = (mouseY-y) / hipotenusa;
+    this.velocidadeX = this.velocidadeBase * sen;
+    this.velocidadeY = this.velocidadeBase * cos;
+    
   }
   
 //Metodos
+  void desenhar(){
+    noStroke();
+    fill(this.cor);
+    ellipse(this.x, this.y, this.largura, this.altura);
+  }
+  
   void atirar(){
-    this.x += this.velocidadeBase;
+    this.x += this.velocidadeX;
+    this.y += this.velocidadeY;
   }
   
   void checarPosicao(){

@@ -4,7 +4,7 @@
 //Fim: ?
 
 Jogador p1 = new Jogador();
-int numZubies = 10;
+int numZubies = 5;
 int balasRestantes = 10;
 int vidas = 5;
 int larguraJogo;
