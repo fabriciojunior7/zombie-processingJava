@@ -6,7 +6,7 @@ class Zumbie extends Entidade{
 //Construtor
   public Zumbie(){
     this.cor = color(0, 255, 0);
-    this.velocidadeBase = random(0.1, 1);
+    this.velocidadeBase = random(0.1, 0.5);
     this.velocidadeX = 0;
     this.velocidadeY = 0;
     this.aceleracao = 0.05;

@@ -56,7 +56,8 @@ void draw(){
             horda.remove(ii);
             if(zumbiesMortos % proximaFase == 0){
               fase++;
-              println("Fase - " + fase);
+              taxaZumbie = round(fase/4)+1;
+              println("Fase - " + fase + " Taxa - " + taxaZumbie);
             }
           }
           break;
@@ -108,7 +109,7 @@ void draw(){
   if(vidas <= 0){
     fill(255, 0, 0);
     textSize(50);
-    text("Game Over", larguraJogo/2-150, alturaJogo/2);
+    text("Game Over", larguraJogo/2-130, alturaJogo/2);
     noLoop();
   }
 }

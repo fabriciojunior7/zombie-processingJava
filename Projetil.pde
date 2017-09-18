@@ -5,13 +5,13 @@ class Projetil extends Entidade{
 
 //Construtor
   public Projetil(Entidade jogador){
-    this.largura = 5;
-    this.altura = 5;
+    this.largura = 3;
+    this.altura = 3;
     //this.x = jogador.x + jogador.largura/2 - this.largura/2;
     //this.y = jogador.y + jogador.altura/2 - this.altura/2;
     this.x = jogador.x + jogador.largura/2;
     this.y = jogador.y + jogador.altura/2;
-    this.velocidadeBase = 10;
+    this.velocidadeBase = 20;
     this.cor = color(200, 150, 100);
     this.naTela = true;
     float x = jogador.x + jogador.largura/2;

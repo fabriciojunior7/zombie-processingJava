@@ -10,7 +10,7 @@ int vidas = 10;
 int larguraJogo;
 int alturaJogo;
 int pontos = 0;
-int fase = 1, proximaFase = 10;
+int fase = 1, proximaFase = 20, taxaZumbie = round(fase/4)+1;
 int zumbiesMortos = 0;
 //ArrayList<Interge> balasPerdidas = new ArrayList();
 IntList balasPerdidas = new IntList();
