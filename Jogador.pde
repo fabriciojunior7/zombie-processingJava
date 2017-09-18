@@ -2,10 +2,11 @@ class Jogador extends Entidade{
 //Atributos
   boolean[] wasd = {false, false, false, false};
   float velocidadeX, velocidadeY, velocidadeMax, velocidadeMin, aceleracao, desaceleracao;
+  int frame;
   
   
 //Construtor
-  public Jogador(PImage imagem){
+  public Jogador(){
     this.largura = 24;
     this.altura = 32;
     this.aceleracao = 0.4;
@@ -15,7 +16,8 @@ class Jogador extends Entidade{
     this.velocidadeMax = 3;
     this.velocidadeMin = 0.2;
     this.forcaEmpurrao = 10;
-    this.imagem = imagem;
+    this.imagem = p1_1Imagem;
+    this.frame = 1;
   }
   
 //Metodos
@@ -171,6 +173,30 @@ class Jogador extends Entidade{
     else if(this.y > alturaJogo-this.altura){
       this.y -= 1;
     }
+  }
+  
+  void animar(){
+    int taxaFrames = 9;
+    //if(abs(this.velocidadeX) >= abs(this.velocidadeY)){
+    //  taxaFrames = round(25/velocidadeX);
+    //}
+    //else{
+    //  taxaFrames = round(25/velocidadeY);
+    //}
+    if(frameCount % taxaFrames == 0){
+      this.frame++;
+      if(this.frame > 2){
+        this.frame = 1;
+      }
+    }
+    
+    if(this.frame == 1){
+      this.imagem = p1_1Imagem;
+    }
+    else{
+      this.imagem = p1_2Imagem;
+    }
+    
   }
 
 

@@ -1,6 +1,9 @@
 void draw(){
   background(0);
   frames();
+  if(p1.velocidadeX != 0 || p1.velocidadeY != 0){
+    p1.animar();
+  }
   p1.movimentar();
   p1.desenhar();
   

@@ -17,7 +17,7 @@ IntList balasPerdidas = new IntList();
 ArrayList<Zumbie> horda = new ArrayList();
 ArrayList<Projetil> balas = new ArrayList();
 
-PImage p1Imagem;
+PImage p1_1Imagem, p1_2Imagem;
 PImage bala1;
 
 PImage zumbie1_1Imagem, zumbie1_2Imagem;
@@ -31,7 +31,7 @@ void setup(){
   
   preload();
   
-  p1 = new Jogador(p1Imagem);
+  p1 = new Jogador();
   for(int i=0; i<numZubies; i++){
     horda.add(new Zumbie());
   }
