@@ -1,6 +1,6 @@
 class Projetil extends Entidade{
 //Atributos
-  float velocidadeX, velocidadeY, velocidadeBase;
+  float velocidadeX, velocidadeY, velocidadeBase, dano;
   boolean naTela;
 
 //Construtor
@@ -21,6 +21,7 @@ class Projetil extends Entidade{
     float cos = (mouseY-y) / hipotenusa;
     this.velocidadeX = this.velocidadeBase * sen;
     this.velocidadeY = this.velocidadeBase * cos;
+    this.dano = 1;
     
   }
   

@@ -5,13 +5,17 @@ class Jogador extends Entidade{
   
   
 //Construtor
-  public Jogador(){
+  public Jogador(PImage imagem){
+    this.largura = 24;
+    this.altura = 32;
     this.aceleracao = 0.4;
     this.desaceleracao = 0.2;
     this.velocidadeX = 0;
     this.velocidadeY = 0;
     this.velocidadeMax = 3;
     this.velocidadeMin = 0.2;
+    this.forcaEmpurrao = 10;
+    this.imagem = imagem;
   }
   
 //Metodos

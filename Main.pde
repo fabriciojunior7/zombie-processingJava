@@ -3,10 +3,10 @@
 //Ultima Atualizacao: 17/09/2017
 //Fim: ?
 
-Jogador p1 = new Jogador();
-int numZubies = 5;
-int balasRestantes = 10;
-int vidas = 5;
+Jogador p1;
+int numZubies = 6;
+int balasRestantes = 25;
+int vidas = 10;
 int larguraJogo;
 int alturaJogo;
 //ArrayList<Interge> balasPerdidas = new ArrayList();
@@ -14,7 +14,9 @@ IntList balasPerdidas = new IntList();
 ArrayList<Zumbie> horda = new ArrayList();
 ArrayList<Projetil> balas = new ArrayList();
 
-PImage zumbieImagem;
+PImage p1Imagem;
+PImage bala1;
+//PImage zumbie1Imagem;
 
 void setup(){
   frameRate(60);
@@ -24,8 +26,9 @@ void setup(){
   
   preload();
   
+  p1 = new Jogador(p1Imagem);
   for(int i=0; i<numZubies; i++){
-    horda.add(new Zumbie(zumbieImagem));
+    horda.add(new Zumbie());
   }
   
 }

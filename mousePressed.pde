@@ -1,8 +1,8 @@
 void mousePressed(){
 
-  if(mouseButton == 37){
+  if(mouseButton == 37 && balasRestantes > 0){
     balas.add(new Projetil(p1));
-    println(balas.size());
+    balasRestantes--;
   }
   
 }

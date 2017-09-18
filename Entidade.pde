@@ -1,7 +1,7 @@
 class Entidade{
 //Atributos
   float x, y, forcaEmpurrao;
-  int largura, altura;
+  int largura, altura, tipo;
   color cor;
   PImage imagem;
   
@@ -13,6 +13,7 @@ class Entidade{
     this.y = 250 - this.altura/2;
     this.cor = color(255, 0, 0);
     this.forcaEmpurrao = 5;
+    this.tipo = 1;
   }
   
   public Entidade(PImage imagem){
@@ -23,11 +24,13 @@ class Entidade{
     this.cor = color(0, 0, 0);
     this.imagem = imagem;
     this.forcaEmpurrao = 5;
+    this.tipo = 1;
   }
   
 //Metodos
   void desenhar(){
     if(this.imagem != null){
+      noStroke();
       //fill(255);
       //rect(this.x, this.y, this.largura, this.altura);
       image(this.imagem, this.x, this.y);
