@@ -11,17 +11,38 @@ class Zumbie extends Entidade{
     this.velocidadeY = 0;
     this.aceleracao = 0.05;
     this.forcaEmpurrao = 1;
-    this.tipo = round(random(1,2));
+    this.tipo = round(random(1, 4));
+    //this.tipo = 4;
     this.imagem = loadImage("imagens/zumbie" + this.tipo + "_1.png");
     this.vidas = round(random(1, 5));
     this.frame = 1;
     if(this.tipo == 1){
       this.largura = 20;
       this.altura = 32;
+      this.ajusteImagemX = -2;
+      this.ajusteImagemY = 0;
+      this.totalFrames = 2;
     }
-    else{
+    else if(this.tipo == 2){
       this.largura = 24;
       this.altura = 30;
+      this.ajusteImagemX = 0;
+      this.ajusteImagemY = 0;
+      this.totalFrames = 2;
+    }
+    else if(this.tipo == 3){
+      this.largura = 20;
+      this.altura = 32;
+      this.ajusteImagemX = -4;
+      this.ajusteImagemY = 0;
+      this.totalFrames = 2;
+    }
+    else if(this.tipo == 4){
+      this.largura = 23;
+      this.altura = 32;
+      this.ajusteImagemX = 0;
+      this.ajusteImagemY = 0;
+      this.totalFrames = 4;
     }
     float nascerX = random(1);
     float nascerY = random(1);
@@ -78,9 +99,17 @@ class Zumbie extends Entidade{
   
   void animar(){
     
-    if(frameCount % round(10/this.velocidadeBase) == 0){
+    int frameTime;
+    if(this.tipo == 4){
+      frameTime = round(6/this.velocidadeBase)-4;
+    }
+    else{
+      frameTime = round(6/this.velocidadeBase);
+    }
+    
+    if(frameCount % frameTime == 0){
       this.frame++;
-      if(this.frame > 2){
+      if(this.frame > this.totalFrames){
         this.frame = 1;
       }
     }
@@ -93,12 +122,37 @@ class Zumbie extends Entidade{
         this.imagem = zumbie1_2Imagem;
       }
     }
-    if(this.tipo == 2){
+    
+    else if(this.tipo == 2){
       if(this.frame == 1){
         this.imagem = zumbie2_1Imagem;
       }
       else{
         this.imagem = zumbie2_2Imagem;
+      }
+    }
+    
+    else if(this.tipo == 3){
+      if(this.frame == 1){
+        this.imagem = zumbie3_1Imagem;
+      }
+      else{
+        this.imagem = zumbie3_2Imagem;
+      }
+    }
+    
+    else if(this.tipo == 4){
+      if(this.frame == 1){
+        this.imagem = zumbie4_1Imagem;
+      }
+      else if(this.frame == 2){
+        this.imagem = zumbie4_2Imagem;
+      }
+      else if(this.frame == 3){
+        this.imagem = zumbie4_1Imagem;
+      }
+      else{
+        this.imagem = zumbie4_3Imagem;
       }
     }
     

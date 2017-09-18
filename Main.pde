@@ -4,7 +4,7 @@
 //Fim: ?
 
 Jogador p1;
-int numZubies = 1;
+int numZubies = 10;
 int balasRestantes = 2000;
 int vidas = 10;
 int larguraJogo;
@@ -22,6 +22,8 @@ PImage bala1;
 
 PImage zumbie1_1Imagem, zumbie1_2Imagem;
 PImage zumbie2_1Imagem, zumbie2_2Imagem;
+PImage zumbie3_1Imagem, zumbie3_2Imagem;
+PImage zumbie4_1Imagem, zumbie4_2Imagem, zumbie4_3Imagem;
 
 void setup(){
   frameRate(60);
