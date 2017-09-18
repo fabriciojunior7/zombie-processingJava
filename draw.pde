@@ -1,5 +1,6 @@
 void draw(){
   background(0);
+  frames();
   p1.movimentar();
   p1.desenhar();
   
@@ -24,6 +25,8 @@ void draw(){
     }
     
     horda.get(i).desenhar();
+    horda.get(i).animar();
+    
     for(int ii=0; ii<horda.get(i).vidas; ii++){
       noStroke();
       fill(abs(10-horda.get(i).vidas)*30, 255-abs(10-horda.get(i).vidas)*30, 0);
@@ -48,7 +51,13 @@ void draw(){
         if(collideBala == true){
           horda.get(ii).vidas -= balas.get(i).dano;
           if(horda.get(ii).vidas <= 0){
+            pontos += horda.get(ii).pontos;
+            zumbiesMortos++;
             horda.remove(ii);
+            if(zumbiesMortos % proximaFase == 0){
+              fase++;
+              println("Fase - " + fase);
+            }
           }
           break;
         }
@@ -91,10 +100,15 @@ void draw(){
   textSize(16);
   text("x" + balasRestantes, 20, alturaJogo+18);
   
+  //Pontos
+  fill(255, 0, 0);
+  textSize(14);
+  text("Pontos: " + pontos, 5, alturaJogo+45);
+  
   if(vidas <= 0){
     fill(255, 0, 0);
-    textSize(24);
-    text("Game Over", larguraJogo/2-25, alturaJogo/2);
+    textSize(50);
+    text("Game Over", larguraJogo/2-150, alturaJogo/2);
     noLoop();
   }
 }

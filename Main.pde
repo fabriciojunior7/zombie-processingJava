@@ -4,11 +4,14 @@
 //Fim: ?
 
 Jogador p1;
-int numZubies = 6;
-int balasRestantes = 25;
+int numZubies = 1;
+int balasRestantes = 2000;
 int vidas = 10;
 int larguraJogo;
 int alturaJogo;
+int pontos = 0;
+int fase = 1, proximaFase = 10;
+int zumbiesMortos = 0;
 //ArrayList<Interge> balasPerdidas = new ArrayList();
 IntList balasPerdidas = new IntList();
 ArrayList<Zumbie> horda = new ArrayList();
@@ -16,7 +19,9 @@ ArrayList<Projetil> balas = new ArrayList();
 
 PImage p1Imagem;
 PImage bala1;
-//PImage zumbie1Imagem;
+
+PImage zumbie1_1Imagem, zumbie1_2Imagem;
+PImage zumbie2_1Imagem, zumbie2_2Imagem;
 
 void setup(){
   frameRate(60);
