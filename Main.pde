@@ -1,6 +1,6 @@
 //Fabricio Vidal da Costa Junior
 //Inicio: 14/09/2017
-//Ultima Atualizacao: 17/09/2017
+//Ultima Atualizacao: 18/09/2017
 //Fim: ?
 
 Jogador p1;
