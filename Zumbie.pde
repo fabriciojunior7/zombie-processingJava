@@ -25,7 +25,7 @@ class Zumbie extends Entidade{
     }
     float nascerX = random(1);
     float nascerY = random(1);
-    float nascerDistancia = 500;
+    float nascerDistancia = 200;
     //X
     if(nascerX <= 0.5){
       this.x = random(-nascerDistancia, -this.largura);

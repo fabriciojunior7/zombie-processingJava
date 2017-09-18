@@ -198,6 +198,16 @@ class Jogador extends Entidade{
     }
     
   }
+  
+  void rodar(){
+    
+    if(this.velocidadeX != 0 || this.velocidadeY != 0){
+      this.animar();
+    }
+    this.movimentar();
+    this.desenhar();
+  
+  }
 
 
 }
