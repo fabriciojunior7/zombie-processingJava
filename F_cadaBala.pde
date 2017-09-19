@@ -11,23 +11,32 @@ void cadaBala(){
     
     boolean collideBala = false;
     if(balas.get(i).naTela == true){
+      
       for(int ii=0; ii<horda.size(); ii++){
+        
         collideBala = collideRect(balas.get(i), horda.get(ii));
         if(collideBala == true){
+          
           horda.get(ii).vidas -= balas.get(i).dano;
           if(horda.get(ii).vidas <= 0){
+            
             pontos += horda.get(ii).pontos;
-            zumbiesMortos++;
+            zombiesMortos++;
             horda.remove(ii);
-            if(zumbiesMortos % proximaFase == 0){
+            if(zombiesMortos % proximaFase == 0){
+              
               fase++;
-              taxaZumbie = round(fase/4)+1;
-              println("Fase - " + fase + " Taxa - " + taxaZumbie);
+              taxaZombies = round(fase/4)+1;
+              
             }
+            
           }
           break;
+          
         }
+   
       }
+      
     }
     else{
       balas.remove(i);

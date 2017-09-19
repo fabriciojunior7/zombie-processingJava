@@ -1,6 +1,6 @@
 void draw(){
   
-  background(0);
+  background(10);
   
   frames();
   p1.rodar();
@@ -10,14 +10,14 @@ void draw(){
   //Mira
   mira();
   
-  //Barra de Vida
-  barraDeVida();
+  //Barra de Vida Jogador
+  barraDeVida(p1);
   
   //Barra Status
   barraDeStatus();
   
   //GameOver
-  if(vidas <= 0){
+  if(p1.vidas <= 0){
     gameOver();
   }
   

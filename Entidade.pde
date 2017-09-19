@@ -1,6 +1,6 @@
 class Entidade{
 //Atributos
-  float x, y, forcaEmpurrao;
+  float x, y, forcaEmpurrao, vidas;
   int largura, altura, tipo, ajusteImagemX, ajusteImagemY, totalFrames;
   color cor;
   PImage imagem;

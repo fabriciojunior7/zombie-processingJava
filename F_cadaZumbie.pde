@@ -17,17 +17,14 @@ void cadaZumbie(){
     if(collidePlayer == true){
       p1.empurrar(horda.get(i));
       horda.get(i).empurrar(p1);
-      vidas--;
+      p1.vidas--;
     }
     
     horda.get(i).desenhar();
     horda.get(i).animar();
     
-    for(int ii=0; ii<horda.get(i).vidas; ii++){
-      noStroke();
-      fill(abs(10-horda.get(i).vidas)*30, 255-abs(10-horda.get(i).vidas)*30, 0);
-      rect(horda.get(i).x+(ii*3)-3, horda.get(i).y-8, 3, 3);
-    }
+    //Barra de Vida
+    barraDeVida(horda.get(i));
 
   }
   

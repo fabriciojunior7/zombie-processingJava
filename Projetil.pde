@@ -1,12 +1,13 @@
 class Projetil extends Entidade{
+  
 //Atributos
   float velocidadeX, velocidadeY, velocidadeBase, dano;
   boolean naTela;
 
 //Construtor
   public Projetil(Entidade jogador){
-    this.largura = 3;
-    this.altura = 3;
+    this.largura = 5;
+    this.altura = 5;
     //this.x = jogador.x + jogador.largura/2 - this.largura/2;
     //this.y = jogador.y + jogador.altura/2 - this.altura/2;
     this.x = jogador.x + jogador.largura/2;

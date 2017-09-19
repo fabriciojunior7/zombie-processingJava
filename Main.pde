@@ -1,29 +1,28 @@
 //Fabricio Vidal da Costa Junior
 //Inicio: 14/09/2017
-//Ultima Atualizacao: 18/09/2017
+//Ultima Atualizacao: 19/09/2017
 //Fim: ?
 
 Jogador p1;
-int numZubies = 10;
+int numZombies = 10;
 int balasRestantes = 2000;
-int vidas = 10;
 int larguraJogo;
 int alturaJogo;
 int pontos = 0;
-int fase = 1, proximaFase = 20, taxaZumbie = round(fase/4)+1;
-int zumbiesMortos = 0;
-//ArrayList<Interge> balasPerdidas = new ArrayList();
+int fase = 1, proximaFase = 10, taxaZombies = round(fase/4)+1;
+int zombiesMortos = 0;
 IntList balasPerdidas = new IntList();
-ArrayList<Zumbie> horda = new ArrayList();
+ArrayList<Zombie> horda = new ArrayList();
 ArrayList<Projetil> balas = new ArrayList();
 
 PImage p1_1Imagem, p1_2Imagem;
 PImage bala1;
+PImage mira1;
 
-PImage zumbie1_1Imagem, zumbie1_2Imagem;
-PImage zumbie2_1Imagem, zumbie2_2Imagem;
-PImage zumbie3_1Imagem, zumbie3_2Imagem;
-PImage zumbie4_1Imagem, zumbie4_2Imagem, zumbie4_3Imagem;
+PImage zombie1_1Imagem, zombie1_2Imagem;
+PImage zombie2_1Imagem, zombie2_2Imagem;
+PImage zombie3_1Imagem, zombie3_2Imagem;
+PImage zombie4_1Imagem, zombie4_2Imagem, zombie4_3Imagem;
 
 void setup(){
   frameRate(60);
@@ -34,8 +33,8 @@ void setup(){
   preload();
   
   p1 = new Jogador();
-  for(int i=0; i<numZubies; i++){
-    horda.add(new Zumbie());
+  for(int i=0; i<numZombies; i++){
+    horda.add(new Zombie());
   }
   
 }

@@ -1,4 +1,5 @@
 class Jogador extends Entidade{
+  
 //Atributos
   boolean[] wasd = {false, false, false, false};
   float velocidadeX, velocidadeY, velocidadeMax, velocidadeMin, aceleracao, desaceleracao;
@@ -18,6 +19,7 @@ class Jogador extends Entidade{
     this.forcaEmpurrao = 10;
     this.imagem = p1_1Imagem;
     this.frame = 1;
+    this.vidas = 10;
   }
   
 //Metodos
@@ -204,10 +206,10 @@ class Jogador extends Entidade{
     if(this.velocidadeX != 0 || this.velocidadeY != 0){
       this.animar();
     }
+    
     this.movimentar();
     this.desenhar();
   
   }
-
 
 }

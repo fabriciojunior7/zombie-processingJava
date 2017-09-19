@@ -1,5 +1,5 @@
 void keyReleased(){
-  //print(keyCode);
+  
   boolean pressionado = false;
   //Eixo X
   if(keyCode == 65 || keyCode == 37){
@@ -16,4 +16,5 @@ void keyReleased(){
   else if(keyCode == 83 || keyCode == 40){
     p1.baixo(pressionado);
   }
+  
 }
