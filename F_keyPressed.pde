@@ -17,4 +17,8 @@ void keyPressed(){
     p1.baixo(pressionado);
   }
   
+  //if(gameOver == true){
+  //  set
+  //}
+  
 }

@@ -6,6 +6,9 @@ void draw(){
   p1.rodar();
   cadaZumbie();
   cadaBala();
+  cadaCaixa();
+  
+  //if(caixas.size() > 0){println(collideSide(p1, caixas.get(0)));}
   
   //Mira
   mira();

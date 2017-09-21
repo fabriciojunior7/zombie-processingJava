@@ -1,0 +1,19 @@
+========== ZOMBIES ==========
+
+----- A Fazer -----
+
+1 - implementar caixas como proteção
+2 - implementar grade de posicionamento dos objetos
+3 - implementar coletavevis
+
+
+
+
+
+
+
+
+
+
+----- Feitos ------
+

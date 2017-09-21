@@ -8,15 +8,15 @@ void cadaZumbie(){
       for(int ii=i+1; ii<horda.size(); ii++){
         boolean collideZumbie = collideRect(horda.get(i), horda.get(ii));
         if(collideZumbie == true){
-          horda.get(i).empurrar(horda.get(ii));
-          horda.get(ii).empurrar(horda.get(i));
+          horda.get(i).serEmpurrado(horda.get(ii), horda.get(i).forcaEmpurrao);
+          horda.get(ii).serEmpurrado(horda.get(i), horda.get(ii).forcaEmpurrao);
         }
       }
     }
     
     if(collidePlayer == true){
-      p1.empurrar(horda.get(i));
-      horda.get(i).empurrar(p1);
+      p1.serEmpurrado(horda.get(i), p1.forcaEmpurrao);
+      horda.get(i).serEmpurrado(p1, p1.forcaEmpurrao);
       p1.vidas--;
     }
     

@@ -9,9 +9,13 @@ void frames(){
     //println(horda.size() + "T - " + zombiesMortos + "M");
   }
   
-  if(frameCount % 10 == 0 && mousePressed){
+  if(frameCount % 10 == 0 && mousePressed && mouseButton == 37){
     balas.add(new Projetil(p1));
     balasRestantes--;
+  }
+  
+  if(mousePressed && mouseButton == 39){
+    mousePressed();
   }
   
 }

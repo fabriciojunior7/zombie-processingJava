@@ -14,4 +14,5 @@ void preload(){
   zombie4_3Imagem = loadImage("imagens/zombie4_3.png");
   bala1 = loadImage("imagens/bala1.png");
   mira1 = loadImage("imagens/bases/mira1Base.png");
+  caixa1Imagem = loadImage("imagens/caixa1.png");
 }

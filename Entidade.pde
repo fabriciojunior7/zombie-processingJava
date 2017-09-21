@@ -4,6 +4,7 @@ class Entidade{
   int largura, altura, tipo, ajusteImagemX, ajusteImagemY, totalFrames;
   color cor;
   PImage imagem;
+  boolean collideEsquerda, collideDireita, collideCima, collideBaixo;
   
 //Construtor
   public Entidade(){
@@ -44,23 +45,26 @@ class Entidade{
     }
   }
   
-  void empurrar(Entidade outro){
-    //Eixo X
+  void serEmpurrado(Entidade outro, float forca){
+    
+    String side;
+    float distX, distY;
     if(this.x > 0 && this.x < larguraJogo && this.y > 0 && this.y < alturaJogo){
-      if(this.x < outro.x){
-        this.x -= this.forcaEmpurrao;
+      
+      side = collideSide(this, outro);
+      if(side == "direita"){
+        this.x -= forca;
       }
-      else{
-        this.x += this.forcaEmpurrao;
+      else if(side == "esquerda"){
+        this.x += forca;
+      }
+      else if(side == "baixo"){
+        this.y -= forca;
+      }
+      else if(side == "cima"){
+        this.y += forca;
       }
       
-      //Eixo Y
-      if(this.y < outro.y){
-        this.y -= this.forcaEmpurrao;
-      }
-      else{
-        this.y += this.forcaEmpurrao;
-      }
     }
     
   }
