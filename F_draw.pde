@@ -3,12 +3,12 @@ void draw(){
   background(10);
   
   frames();
+  cadaCaixa();
   p1.rodar();
   cadaZumbie();
+  cadaItem();
   cadaBala();
-  cadaCaixa();
-  
-  //if(caixas.size() > 0){println(collideSide(p1, caixas.get(0)));}
+  //grade();
   
   //Mira
   mira();

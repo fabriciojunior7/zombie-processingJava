@@ -11,9 +11,18 @@ class Caixa extends Entidade{
     this.altura = 32;
     this.imagem = caixa1Imagem;
     this.forcaEmpurrao = 0;
-    this.vidas = 100;
+    this.vidas = 1000;
   }
   
-  
+  //Construtor2
+  public Caixa(int x, int y){
+    this.x = x;
+    this.y = y;
+    this.largura = 32;
+    this.altura = 32;
+    this.imagem = caixa1Imagem;
+    this.forcaEmpurrao = 0;
+    this.vidas = 1000;
+  }
 
 }

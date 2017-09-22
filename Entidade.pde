@@ -48,24 +48,22 @@ class Entidade{
   void serEmpurrado(Entidade outro, float forca){
     
     String side;
-    float distX, distY;
-    if(this.x > 0 && this.x < larguraJogo && this.y > 0 && this.y < alturaJogo){
       
-      side = collideSide(this, outro);
-      if(side == "direita"){
-        this.x -= forca;
-      }
-      else if(side == "esquerda"){
-        this.x += forca;
-      }
-      else if(side == "baixo"){
-        this.y -= forca;
-      }
-      else if(side == "cima"){
-        this.y += forca;
-      }
-      
+    side = collideSide(this, outro);
+    if(side == "direita"){
+      this.x -= forca;
     }
+    else if(side == "esquerda"){
+      this.x += forca;
+    }
+    else if(side == "baixo"){
+      this.y -= forca;
+    }
+    else if(side == "cima"){
+      this.y += forca;
+  }
+      
+    
     
   }
   

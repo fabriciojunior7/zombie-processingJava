@@ -15,7 +15,7 @@ class Zombie extends Entidade{
     this.tipo = round(random(1, 4));
     //this.tipo = 4;
     this.imagem = loadImage("imagens/zombie" + this.tipo + "_1.png");
-    this.vidas = round(random(1, 5));
+    this.vidas = round(random(1, 2));
     this.frame = 1;
     if(this.tipo == 1){
       this.largura = 20;

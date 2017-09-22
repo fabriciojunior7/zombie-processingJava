@@ -6,7 +6,7 @@ void barraDeStatus(){
   rect(2, alturaJogo, larguraJogo-3, 48, 10);
   
   //Balas
-  image(bala1, 5, alturaJogo+5);
+  image(bala1Imagem, 5, alturaJogo+5);
   fill(110, 110, 0);
   textSize(16);
   text("x" + balasRestantes, 20, alturaJogo+18);
@@ -22,7 +22,6 @@ void barraDeStatus(){
   text("Horda: " + horda.size(), 120, alturaJogo+18);
   
   //Zombies Mortos
-  //fill(0, 255, 0);
   textSize(16);
   text("Zobies Mortos: " + zombiesMortos, 120, alturaJogo+42);
   
@@ -34,6 +33,6 @@ void barraDeStatus(){
   //Zombies Mortos
   //fill(0, 255, 0);
   textSize(16);
-  text("Taxa: " + float(taxaZombies)/2 + " zombies/seg", 290, alturaJogo+42);
+  text("Taxa: " + float(taxaZombies)/5 + " zombies/seg", 290, alturaJogo+42);
 
 }

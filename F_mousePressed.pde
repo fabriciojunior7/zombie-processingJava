@@ -34,7 +34,7 @@ void mousePressed(){
     }
     
     //Criar a Caixa
-    if(collideCaixa == false && collidePlayer == false && collideZombie == false){
+    if(collideCaixa == false && collidePlayer == false && collideZombie == false && mouseX < larguraJogo-10 && mouseY < alturaJogo-10 && caixas.size() < limiteCaixas){
       caixas.add(new Caixa());
     }
     
