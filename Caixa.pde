@@ -11,7 +11,7 @@ class Caixa extends Entidade{
     this.altura = 32;
     this.imagem = caixa1_100Imagem;
     this.forcaEmpurrao = 0;
-    this.vidasMax = 250;
+    this.vidasMax = 300;
     this.vidas = this.vidasMax;
   }
   
@@ -23,7 +23,7 @@ class Caixa extends Entidade{
     this.altura = 32;
     this.imagem = caixa1_100Imagem;
     this.forcaEmpurrao = 0;
-    this.vidasMax = 250;
+    this.vidasMax = 300;
     this.vidas = this.vidasMax;
   }
   
