@@ -20,14 +20,14 @@ void frames(){
     mousePressed();
   }
   
-  //Vida Extra
-  if(frameCount % round(30*segundos) == 0){
-    itens.add(new Item(1));
-  }
-  //Balas Extra
-  if(frameCount % round(15*segundos) == 0){
-    itens.add(new Item(2));
-  }
+  ////Vida Extra
+  //if(frameCount % round(30*segundos) == 0){
+  //  itens.add(new Item(1));
+  //}
+  ////Balas Extra
+  //if(frameCount % round(15*segundos) == 0){
+  //  itens.add(new Item(2));
+  //}
   
   
 }

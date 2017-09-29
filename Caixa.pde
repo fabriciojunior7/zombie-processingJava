@@ -1,7 +1,7 @@
 class Caixa extends Entidade{
 
   //Atributos
-  
+  float vidaMax;
   
   //Construtor
   public Caixa(){
@@ -11,7 +11,8 @@ class Caixa extends Entidade{
     this.altura = 32;
     this.imagem = caixa1Imagem;
     this.forcaEmpurrao = 0;
-    this.vidas = 1000;
+    this.vidas = 500;
+    this.vidaMax = 500;
   }
   
   //Construtor2

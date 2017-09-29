@@ -1,6 +1,6 @@
 void draw(){
   
-  background(30);
+  background(10);
   
   frames();
   cadaCaixa();

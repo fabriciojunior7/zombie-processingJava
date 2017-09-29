@@ -19,9 +19,9 @@ void cadaBala(){
           
           horda.get(ii).vidas -= balas.get(i).dano;
           if(horda.get(ii).vidas <= 0){
-            
             pontos += horda.get(ii).pontos;
             zombiesMortos++;
+            spawnItem(horda.get(ii).x, horda.get(ii).y);
             horda.remove(ii);
             if(zombiesMortos % proximaFase == 0){
               

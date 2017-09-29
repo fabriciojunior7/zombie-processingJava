@@ -4,9 +4,11 @@ class Item extends Entidade{
   int tempoVida;
   
   //Metodos
-  Item(int tipo){
-    this.x = random(10, larguraJogo-26);
-    this.y = random(10, alturaJogo-26);
+  Item(int tipo, float x, float y){
+    //this.x = random(10, larguraJogo-26);
+    //this.y = random(10, alturaJogo-26);
+    this.x = x;
+    this.y = y;
     this.tipo = tipo;
     //Vida
     if(this.tipo == 1){

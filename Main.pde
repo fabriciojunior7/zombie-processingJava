@@ -7,6 +7,7 @@ Jogador p1;
 int fps = 60;
 int numZombies = 1;
 int balasRestantes = 16;
+int caixarestantes = 0;
 int larguraJogo;
 int alturaJogo;
 int pontos = 0;
