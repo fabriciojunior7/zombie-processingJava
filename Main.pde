@@ -59,7 +59,6 @@ void setup(){
   
   //Cenario Inicial
   int numCaixas = round(random(0, 10));
-  //int numCaixas = 100;
   boolean collidePlayer = false, collideCaixa = false;
   for(int i=0; i<numCaixas; i++){
     int x = 32*round(random(0, 14))+10;
@@ -82,6 +81,5 @@ void setup(){
       }
     }
   }
-  
   
 }

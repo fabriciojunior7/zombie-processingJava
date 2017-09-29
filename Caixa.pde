@@ -3,7 +3,7 @@ class Caixa extends Entidade{
   //Atributos
   float vidasMax;
   
-  //Construtor
+  //Construtor 1
   public Caixa(){
     this.x = mouseX-((mouseX-16)%32)-6;
     this.y = mouseY-((mouseY-16)%32)-6;
@@ -23,7 +23,8 @@ class Caixa extends Entidade{
     this.altura = 32;
     this.imagem = caixa1_100Imagem;
     this.forcaEmpurrao = 0;
-    this.vidas = 1000;
+    this.vidasMax = 250;
+    this.vidas = this.vidasMax;
   }
   
   //Desgaste
