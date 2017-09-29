@@ -4,12 +4,19 @@ void spawnItem(float x, float y){
   int tipo = round(random(1, 100));
   
   if(spawn <= 40){
-    if(tipo <= 25){
+    //Vida
+    if(tipo <= 20){
       itens.add(new Item(1, x, y));
     }
-    else{
+    //Balas
+    else if(tipo <= 50){
       itens.add(new Item(2, x, y));
     }
+    //Moedas
+    else{
+      itens.add(new Item(3, x, y));
+    }
+    
   }
   
 }

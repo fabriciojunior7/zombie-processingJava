@@ -1,17 +1,18 @@
 //Fabricio Vidal da Costa Junior
 //Inicio: 14/09/2017
-//Ultima Atualizacao: 22/09/2017
+//Ultima Atualizacao: 29/09/2017
 //Fim: ?
 
 Jogador p1;
 int fps = 60;
 int numZombies = 1;
 int balasRestantes = 16;
-int caixarestantes = 0;
+int caixasRestantes = 0;
+int moedas = 50;
 int larguraJogo;
 int alturaJogo;
 int pontos = 0;
-int fase = 1, proximaFase = 10, taxaZombies = round(fase/4)+1, tempoNascerZombie = 5;
+int fase = 1, proximaFase = 10, taxaZombies = round(fase/4)+1, tempoNascerZombie = 3;
 int zombiesMortos = 0;
 int limiteCaixas = 150;
 IntList balasPerdidas = new IntList();
@@ -22,6 +23,7 @@ ArrayList<Item> itens = new ArrayList();
 
 boolean gameOver = false;
 boolean construir = false;
+boolean pause = false;
 
 PImage p1_1Imagem, p1_2Imagem;
 PImage bala1Imagem;
@@ -30,8 +32,11 @@ PImage zombie1_1Imagem, zombie1_2Imagem;
 PImage zombie2_1Imagem, zombie2_2Imagem;
 PImage zombie3_1Imagem, zombie3_2Imagem;
 PImage zombie4_1Imagem, zombie4_2Imagem, zombie4_3Imagem;
-PImage caixa1Imagem;
+PImage caixa1_100Imagem, caixa1_75Imagem, caixa1_50Imagem, caixa1_25Imagem, caixa1_10Imagem;
+PImage caixa1BaseImagem;
 PImage vida1Imagem;
+PImage moeda1_1Imagem, moeda1_2Imagem, moeda1_3Imagem;
+PImage botao1Imagem, botao2Imagem, botao3Imagem;
 
 String tipoArma = "revolver";
 
@@ -53,7 +58,7 @@ void setup(){
   }
   
   //Cenario Inicial
-  int numCaixas = round(random(0, 20));
+  int numCaixas = round(random(0, 10));
   //int numCaixas = 100;
   boolean collidePlayer = false, collideCaixa = false;
   for(int i=0; i<numCaixas; i++){

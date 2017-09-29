@@ -50,10 +50,21 @@ boolean collideRect(Entidade entidade1, Entidade entidade2){
 boolean collidePoint(float x1, float y1, Entidade entidade){
   
   boolean colisao = false;
-  float distX = abs(x1 - entidade.x);
-  float distY = abs(y1 - entidade.y);
   
   if(x1 > entidade.x && x1 < entidade.x+entidade.largura && y1 > entidade.y && y1 < entidade.y+entidade.altura){
+    colisao = true;
+  }
+  
+  return colisao;
+  
+}
+
+//Colisao Pontos 2
+boolean collidePoint(float x1, float y1, float x2, float y2, int largura, int altura){
+  
+  boolean colisao = false;
+  
+  if(x1 > x2 && x1 < x2+largura && y1 > y2 && y1 < y2+altura){
     colisao = true;
   }
   

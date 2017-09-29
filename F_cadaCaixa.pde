@@ -47,6 +47,8 @@ void cadaCaixa(){
     }
     
     caixas.get(i).desenhar();
+    caixas.get(i).desgaste();
+    
     if(caixas.get(i).vidas <= 0){
       caixas.remove(i);
     }

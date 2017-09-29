@@ -14,7 +14,7 @@ class Jogador extends Entidade{
     this.desaceleracao = 0.2;
     this.velocidadeX = 0;
     this.velocidadeY = 0;
-    this.velocidadeMax = 3;
+    this.velocidadeMax = 2;
     this.velocidadeMin = 0.2;
     this.forcaEmpurrao = 10;
     this.imagem = p1_1Imagem;
@@ -197,12 +197,6 @@ class Jogador extends Entidade{
   
   void animar(){
     int taxaFrames = 9;
-    //if(abs(this.velocidadeX) >= abs(this.velocidadeY)){
-    //  taxaFrames = round(25/velocidadeX);
-    //}
-    //else{
-    //  taxaFrames = round(25/velocidadeY);
-    //}
     if(frameCount % taxaFrames == 0){
       this.frame++;
       if(this.frame > 2){
