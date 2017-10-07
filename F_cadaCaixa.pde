@@ -43,6 +43,7 @@ void cadaCaixa(){
       if(collideZombie == true){
         horda.get(ii).serEmpurrado(caixas.get(i), horda.get(ii).forcaEmpurrao*2);
         caixas.get(i).vidas--;
+        caixas.get(i).levandoDano = true;
       }
     }
     

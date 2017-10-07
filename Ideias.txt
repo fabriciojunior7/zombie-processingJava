@@ -2,20 +2,25 @@
 
 ----- A Fazer -----
 
-- implementar coletavevis
+- Implementar Metralhadora
+- Implementar Granada
+- Implementar Mina Terrestre
+- Implementar FASES
+- Implementar/Melhorar LOJA
 - Organizar Codigo
-
-
-
-
-
-
-
-
+- Melhorar GRÁFICOS
+- Implementar MENU
+- Implementar Escolha de Personagem
+- Implementar Idiomas
+- Implementar BACKGROUND
+- Implementar/Melhorar STATUSBAR
+- Implementar INVENTÁRIO
+- Implementar CLIMA
 
 
 ----- Feitos ------
 
-1 - implementar grade de posicionamento dos objetos - 20/09/2017
-2 - implementar caixas como proteção - 21/09/2017
-3 - implementar coletavevis - 22/09/2017
+1 - Implementar Grade de Posicionamento dos Objetos - 20/09/2017
+2 - Implementar Caixas como Proteção - 21/09/2017
+3 - Implementar Coletavevis - 22/09/2017
+4 - Implementar DEBUG MODE - 07/10/2017

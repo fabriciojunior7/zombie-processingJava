@@ -1,5 +1,6 @@
 void keyPressed(){
   
+  //println(keyCode);
   if(pause == false){
     boolean pressionado = true;
     //Eixo X
@@ -17,6 +18,16 @@ void keyPressed(){
     else if(keyCode == 83 || keyCode == 40){
       p1.baixo(pressionado);
     }
+    
+    //Debug
+    if(keyCode == 114){
+      if(debug == true){
+        debug = false;
+      }
+      else{
+        debug = true;
+      }
+    }
   
   }
   
@@ -29,5 +40,6 @@ void keyPressed(){
         pause = true;
       }
     }
+    
   
 }

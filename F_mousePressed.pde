@@ -52,7 +52,7 @@ void mousePressed(){
         moedas -= 10;
       }
       else if(collideBotao2 && moedas >= 10){
-        caixasRestantes += 10;
+        caixasRestantes += 5;
         moedas -= 10;
       }
       else if(collideBotao3 && moedas >= 25 && p1.vidas < 10){

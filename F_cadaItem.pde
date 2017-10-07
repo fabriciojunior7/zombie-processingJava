@@ -13,7 +13,7 @@ void cadaItem(){
     
     //Contador Tempo de Vida
     if(frameCount % 60 == 0){
-      itens.get(i).tempoVida -= 1;
+      itens.get(i).rodar();
     }
     
     itens.get(i).desenhar();
@@ -29,5 +29,6 @@ void cadaItem(){
     }
     
   }
+  noTint();
   
 }

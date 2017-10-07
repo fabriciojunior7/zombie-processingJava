@@ -4,6 +4,7 @@ IntList b3 = new IntList(4);
 
 void loja(){
   //Configuracoes Iniciais
+  fill(255, 0, 0);
   b1.append(25);
   b1.append(100);
   b1.append(botao1Imagem.width);

@@ -1,6 +1,6 @@
 //Fabricio Vidal da Costa Junior
 //Inicio: 14/09/2017
-//Ultima Atualizacao: 29/09/2017
+//Ultima Atualizacao: 07/10/2017
 //Fim: ?
 
 Jogador p1;
@@ -24,6 +24,7 @@ ArrayList<Item> itens = new ArrayList();
 boolean gameOver = false;
 boolean construir = false;
 boolean pause = false;
+boolean debug = false;
 
 PImage p1_1Imagem, p1_2Imagem;
 PImage bala1Imagem;
@@ -42,8 +43,8 @@ String tipoArma = "revolver";
 
 void setup(){
   frameRate(fps);
-  size(500, 550, P2D);
-  //size(500, 550);
+  //size(500, 550, P2D);
+  size(500, 550);
   larguraJogo = width;
   alturaJogo = height - 50;
   

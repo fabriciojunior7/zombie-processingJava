@@ -3,7 +3,7 @@ class Item extends Entidade{
   //Atributos
   int tempoVida, frame;
   
-  //Metodos
+  //Construtor
   Item(int tipo, float x, float y){
     //this.x = random(10, larguraJogo-26);
     //this.y = random(10, alturaJogo-26);
@@ -31,6 +31,12 @@ class Item extends Entidade{
   
   void rodar(){
     this.tempoVida -= 1;
+    if(this.tempoVida <= 3){
+      this.levandoDano = true;
+    }
+    else{
+      noTint();
+    }
   }
   
   void sobrepondo(){

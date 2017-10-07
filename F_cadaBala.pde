@@ -18,6 +18,7 @@ void cadaBala(){
         if(collideBala == true){
           
           horda.get(ii).vidas -= balas.get(i).dano;
+          horda.get(ii).levandoDano = true;
           if(horda.get(ii).vidas <= 0){
             pontos += horda.get(ii).pontos;
             zombiesMortos++;

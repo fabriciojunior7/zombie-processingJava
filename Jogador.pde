@@ -225,7 +225,7 @@ class Jogador extends Entidade{
   }
   
   void serEmpurrado(Entidade outro, float forca){
-    
+    this.levandoDano = true;
     String side;
     if(this.x > 0 && this.x < larguraJogo && this.y > 0 && this.y < alturaJogo){
       
